@@ -1,0 +1,22 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    height: 600px;
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(24, 24, 24);
+    padding: 20px;
+    color: antiquewhite;
+    
+}
+.cat{
+width: 350px;
+height: 60%;
+
+border-radius: 10px;
+}
