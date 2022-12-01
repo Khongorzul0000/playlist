@@ -1,0 +1,16 @@
+.body{
+    height: 84.2vh;
+    width: 76vw;
+    background-color: rgb(42, 42, 43);
+    padding: 2vw;
+   
+}
+.main{
+    display: flex;
+}
+.focus{
+    color: white;
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 20px;
+}

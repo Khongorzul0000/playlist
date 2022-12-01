@@ -1,0 +1,21 @@
+.nav{
+    height: 8vh;
+    width: 100%;
+    background-color: rgb(33, 33, 33);
+}
+.zai{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 40px;
+    gap: 40px;
+}
+.see{
+    height: 50px;
+    width: 90px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}

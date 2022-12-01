@@ -24,10 +24,7 @@ export const Left = () => {
           Library
         </div>
       </div>
-      <div>
-        <div className={styles.nav}></div>
-        <div className={styles.main}></div>
-      </div>
+      
     </div>
   );
 };

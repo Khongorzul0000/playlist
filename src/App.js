@@ -1,12 +1,12 @@
 import "./App.css";
 
-import { Song } from "./component";
+import { Left, Song, Main , Nav, See, } from "./component";
 
 
 const App = () => {
   
   return (
-    <Song/>
+    <Main/>
   );
 };
 export default App;
