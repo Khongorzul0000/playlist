@@ -1,0 +1,93 @@
+.just{
+    width: 23vw;
+    height: 100vh;  
+}
+.spo{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+   
+}
+.p{
+    font-size: 4vh;
+}
+.button{
+    height: 50px;
+    width: 380px;
+    border-radius: 20px;
+    background-color: rgb(27, 78, 188);
+    border: 0px;
+    color: white;
+    font-size: 20px;
+    
+}
+.btn{
+    height: 50px;
+    width: 380px;
+    border-radius: 20px;
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+    font-size: 20px;
+}
+.address{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+.enter{
+    height: 50px;
+    width: 22.67vw;
+    border: 1px solid gray;
+
+}
+.yyy{
+    height: 50px;
+    width: 100px;
+    border: 1px solid gray;
+}
+.ymd{
+    display: flex;
+    justify-content: space-between;
+
+}
+.check{
+    display: flex;
+}
+.gender{
+    display: flex;
+    justify-content: space-evenly;
+}
+.sing{
+    height: 50px;
+    width: 140px;
+    border-radius:30px ;
+    background-color: rgb(42, 181, 42);
+    border: 1px solid black;
+    font-size: 17px;
+    color: black;
+    margin-bottom: 100px;
+}
+.last{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+p{
+    display: flex;
+    justify-content: center;
+}
+.btnflex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.biy{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+   
+}

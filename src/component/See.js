@@ -4,6 +4,8 @@ import { MdAccessTime } from "react-icons/md";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Left, Nav } from "../component";
+import { AiFillPlayCircle } from "react-icons/ai";
+import { AiOutlineHeart } from "react-icons/ai";
 import { AiFillPropertySafety } from "react-icons/ai";
 export const See = (props) => {
   const [data, setData] = useState([0]);
@@ -22,13 +24,13 @@ export const See = (props) => {
   }, [limit]);
 
   
+
+  
   
   return (
     <>
       <div className={styles.col}>
-        <Left />
         <div>
-          <Nav />
           <div>
             <div className={styles.intro}>
               
@@ -43,6 +45,14 @@ export const See = (props) => {
               
             </div>
             <div className={styles.list}>
+              <div className={styles.mur}>
+                <div className={styles.play}>
+                  <AiFillPlayCircle/>
+                </div>
+                <div className={styles.heart}>
+                  <AiOutlineHeart/>
+                </div>
+              </div>
               <div className={styles.grid}>
                 <p className={styles.tit}>#TITLE</p>
                 <p className={styles.al}>ALBUM</p>
@@ -52,7 +62,7 @@ export const See = (props) => {
                 </div>
               </div>
               <hr className={styles.hr}></hr>
-              <div>
+              <div className={styles.hidden}>
                 {data.map(({ image, id, name }) => (
                   <div className={styles.list_row}>
                     <div className={styles.list_flex}>

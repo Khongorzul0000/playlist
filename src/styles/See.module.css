@@ -1,5 +1,6 @@
 .col{
     display: flex;
+    height: 100vh;
 }
 .intro{
     height: 33vh;
@@ -25,9 +26,8 @@
 .list{
     width: 80vw;
     background-color:rgb(60, 59, 59);
-    height: fit-content;
+    height: 67vh;
     color: white;
-    overflow: hidden;
 }
 .grid{
    display: flex;
@@ -68,4 +68,25 @@
     gap: 10px;
     align-items: center;
     width: 40%;
+}
+.play{
+    color: rgb(71, 196, 71);
+    font-size: 3vw;
+    margin-left: 20px;
+ 
+}
+.heart{
+    font-size: 2vw;
+  
+    
+}
+.mur{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    gap: 20px;
+}
+.hidden{
+    overflow: scroll;
+    height: 42.6vh;
 }
