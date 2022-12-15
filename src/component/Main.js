@@ -1,5 +1,5 @@
 import styles from "../styles/Main.module.css";
-import { Left, Song, Nav, See } from "../component";
+import { Left, Song, Nav, Happy, Oneof, Lenght } from "../component";
 
 export const Main = () => {
   return (
@@ -10,12 +10,18 @@ export const Main = () => {
           <div className={styles.body}>
             <div className={styles.over}>
             <h2 className={styles.focus}>Focus song</h2>
-            <Song />
+            <Lenght/>
+            <h2 className={styles.focus}>Recommended radio</h2>
+            <Song/>
             <h2 className={styles.focus}>Mood</h2>
-            <Song />
+            <div className={styles.p}>/available to like/</div>
+            <Oneof/>
             <h2 className={styles.focus}>Spotify play-lists</h2>
-            <Song />
+            <div className={styles.p}>/available to like/</div>
+            <Happy />
+           
             </div>
+           
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
 import { useState, useRef } from "react";
 import styles from "../styles/Like.module.css";
+import { Song } from "./Song";
 
-export const Like = ()=>{
+export const Like = () => {
   const [tasks, setTasks] = useState([]);
   const [value, setValue] = useState("");
 
@@ -23,44 +24,41 @@ export const Like = ()=>{
     tasksClone[index].isCompleted = !tasksClone[index].isCompleted;
     setTasks(tasksClone);
   };
-    return(
-      <div className={styles.bg}>
-      <div className="bg">
-        <div className="todo-input">
-          <div className="input-btn">
-            <input
-              className="input"
-              placeholder="add todo..."
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-            ></input>
-            <button className="btn" onClick={add}>
-              add
-            </button>
-            {tasks.map((task, index) => {
-              return (
-                <div className="space">
-                  <div className="border">
-                    <div className="posi-of-todo">
-                      <input
-                        type="checkbox"
-                        onClick={() => handleCheck(index)}
-                      ></input>
-                      <div
-                      >
-                        {task.text}
-                      </div>
-                      <button className="dlt-btn" onClick={() => remove(index)}>
-                        delete
-                      </button>
-                    </div>
-                  </div>
+  
+
+  return (
+    <div className={styles.bg}>
+      <div>
+        <input
+          className={styles.input}
+          placeholder="add one you like"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        ></input>
+        <button className={styles.btn} onClick={add}>
+          add
+        </button>
+        <p className={styles.liked}>Your liked ones</p>
+        <div className={styles.over}>
+        {
+          tasks.map((task, index, imgSrc) => {
+            return (
+              <div className={styles.row}>
+                <div className={styles.card}>
+                  <img
+                    src="https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg"
+                    className={styles.card_img}
+                  ></img>
+                 <p className={styles.liked_one}>{task.text}</p>
+                  <button className={styles.dlt} onClick={() => remove(index)}>
+                    delete from liked
+                  </button>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
-    )
-}
+  );
+};

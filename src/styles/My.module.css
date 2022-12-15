@@ -1,0 +1,48 @@
+.eight{
+    width: 80vw;
+    height: 100vh;
+    background: linear-gradient(180deg, 	#696969 5.09%, #121212 33.4%);   
+}
+.rest{
+    height: 17vw;
+    width: 100%;
+    display: flex;
+}
+.cat{
+    height: 80%;
+    width: 17%;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.side{
+    color: aliceblue;
+    margin: 20px;   
+}
+h1{
+    font-size: 70px;
+}
+.pl{
+    margin-top: 20px;
+}
+.dot{
+    font-size: 40px;
+    color: aliceblue;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.hr{
+    border: 0.001px solid white;
+    margin: 10px 50px 0 50px;
+}
+.let{
+    font-size: 28px;
+    color: aliceblue;
+}
+.in{
+    height: 35px;
+    width: 300px;
+    border-radius: 3px;
+    margin-left: 50px;
+    border: 0;
+    background-color: hsla(0,0%,100%,.1);
+}

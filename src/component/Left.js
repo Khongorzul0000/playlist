@@ -1,8 +1,10 @@
 import { FaSpotify } from "react-icons/fa";
+import { AiFillPlusSquare } from "react-icons/ai";
+import { BsBookmarkHeartFill } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
 import { AiFillSignal } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
-import { See, Main, Date, Sign, Song, Search } from "../component";
+import { See, Main, Date, Sign, My, Search, Like } from "../component";
 import { BiLibrary } from "react-icons/bi";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
@@ -30,15 +32,30 @@ export const Left = () => {
           </div>
           <div className={styles.home}>
             <BiLibrary />
-            <Link to="Library" className={styles.link}>
+            <Link to="your-liked" className={styles.link}>
               Your liked
             </Link>
           </div>
+          
           <div className={styles.home}>
             <AiFillSignal/>
             <Link to="sign-up" className={styles.link}>
               Sign-up
             </Link>
+          </div>
+          <div className={styles.ttt}>
+          <div className={styles.home}>
+            <AiFillPlusSquare/>
+            <Link to="create play-list" className={styles.link}>
+              Create play-list
+            </Link>
+          </div>
+          <div className={styles.home}>
+            <BsBookmarkHeartFill/>
+            <Link to="liked songs" className={styles.link}>
+              Liked songs
+            </Link>
+          </div>
           </div>
           <div className={styles.play}>
             <AiFillPlayCircle />
@@ -54,6 +71,9 @@ export const Left = () => {
         <Route path="Search" element={<Search />}></Route>
         <Route path="see-more" element={<See />}></Route>
         <Route path="sign-up" element={<Sign />}></Route>
+        <Route path="your-liked" element={<Like />}></Route>
+        <Route path="create play-list" element={<My />}></Route>
+        <Route path="liked songs" element={<My />}></Route>
       </Routes>
     </BrowserRouter>
   );

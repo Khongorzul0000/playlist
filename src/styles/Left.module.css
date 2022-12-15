@@ -16,7 +16,8 @@
 }
 .home{
     font-size: 1vw;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-family:  Arial, Helvetica, sans-serif;
     gap: 10px;
     margin-left: 30px;
 } 
@@ -33,4 +34,7 @@
 }
 body{
     display: block;
+}
+.ttt{
+    margin-top: 50px;
 }
