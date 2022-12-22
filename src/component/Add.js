@@ -1,9 +1,6 @@
-
-import { useState, useRef } from "react";
-
-
-const Date = () => {
-  const [tasks, setTasks] = useState([]);
+import { useState} from "react";
+export const Add = () =>{
+     const [tasks, setTasks] = useState([]);
   const [value, setValue] = useState("");
 
   const add = () => {
@@ -13,6 +10,7 @@ const Date = () => {
   };
   const remove = (index) => {
     console.log("remove");
+    
     const newTasks = tasks.filter((_, i) => {
       if (i === index) return false;
       return true;
@@ -23,10 +21,11 @@ const Date = () => {
     const tasksClone = [...tasks];
     tasksClone[index].isCompleted = !tasksClone[index].isCompleted;
     setTasks(tasksClone);
+    console.log(tasksClone)
   };
-
-  return (
-    <div className="bg-posi">
+    return(
+        <>
+        <div className="bg-posi">
       <div className="bg">
         <div className="todo-input">
           <p className="todo">ToDo-List</p>
@@ -71,6 +70,6 @@ const Date = () => {
         </div>
       </div>
     </div>
-  );
-};
-
+        </>
+    )
+}

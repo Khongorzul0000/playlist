@@ -1,30 +1,97 @@
 import styles from "../styles/My.module.css";
+import { useState, useRef } from "react";
 import { BsThreeDots } from "react-icons/bs";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Left, Song, Nav, See, Oneof, Lenght } from "../component";
 
 export const My = () => {
+  const [tasks, setTasks] = useState([]);
+
+  const [value, setValue] = useState("");
+  const [image, setImage] = useState("");
+
+  const add = () => {
+    const newTask = { text: value, isCompleted: false, img: image };
+
+    setTasks([...tasks, newTask]);
+    console.log(value);
+    // console.log(image)
+    if ((!value, !image)) return;
+  };
+  // const plus = () => {
+  //   if (!image) return;
+  //   const newImg = { img: image, isCompleted: false };
+  //   setTasks([...tasks, newImg]);
+  // };
+  const remove = (index) => {
+    console.log("remove");
+    const newTasks = tasks.filter((_, i) => {
+      if (i === index) return false;
+      return true;
+    });
+    setTasks(newTasks);
+    if (!value) {
+      console.log(value);
+    }
+  };
+
   return (
     <div>
-        <div className={styles.eight}>
-            <div className={styles.rest}>
-                <img src="https://img.freepik.com/free-photo/dark-room-background-with-light_125540-1022.jpg?w=2000" className={styles.cat}></img>
-                <div className={styles.side}>
-                    <div >play-list</div>
-                    <h1 className={styles.pl}>My play-list #1</h1>
-                    <div>User name</div>
-                    
-                </div>
-            </div>
-            <div>
-               <div className={styles.dot}> 
-                <BsThreeDots/>
-               </div>
-               <div className={styles.hr}></div>
-               <p className={styles.let}>Let's find something for your playlist</p>
-               <input className={styles.in} placeholder="Search for songs or episode"></input>
-            </div>
+      <div className={styles.eight}>
+        <div className={styles.rest}>
+          <img
+            src="https://img.freepik.com/free-photo/dark-room-background-with-light_125540-1022.jpg?w=2000"
+            className={styles.cat}
+          ></img>
+          <div className={styles.side}>
+            <div>play-list</div>
+            <h1 className={styles.pl}>My play-list #1</h1>
+            <div>User name</div>
+          </div>
         </div>
+        <div>
+          <div className={styles.dot}>
+            <BsThreeDots />
+          </div>
+          <div className={styles.hr}></div>
+          <p className={styles.let}>Create your own play-list</p>
+          <input
+            className={styles.in}
+            placeholder="name of song"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+          ></input>
+
+          <input
+            className={styles.in}
+            placeholder="link of image"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+          ></input>
+          <button className={styles.btn} onClick={add}>
+            add
+          </button>
+
+          <div className={styles.over}>
+            {tasks.map((task, index, imgSrc) => {
+              return (
+                <div className={styles.row}>
+                  <div className={styles.card}>
+                    <img src={task.img} className={styles.card_img}></img>
+                    <p className={styles.liked_one}>{task.text}</p>
+                    <button
+                      className={styles.dlt}
+                      onClick={() => remove(index)}
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

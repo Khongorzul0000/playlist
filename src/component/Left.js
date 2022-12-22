@@ -4,7 +4,7 @@ import { BsBookmarkHeartFill } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
 import { AiFillSignal } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
-import { See, Main, Date, Sign, My, Search, Like } from "../component";
+import { See, Main, Sign, My, Search, Like } from "../component";
 import { BiLibrary } from "react-icons/bi";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
@@ -30,13 +30,7 @@ export const Left = () => {
               Search
             </Link>
           </div>
-          <div className={styles.home}>
-            <BiLibrary />
-            <Link to="your-liked" className={styles.link}>
-              Your liked
-            </Link>
-          </div>
-          
+        
           <div className={styles.home}>
             <AiFillSignal/>
             <Link to="sign-up" className={styles.link}>
@@ -67,13 +61,14 @@ export const Left = () => {
         </div>
       </div>
       <Routes>
+        <Route path = "/" element={<Main/>}></Route>
         <Route path="Home" element={<Main />}></Route>
         <Route path="Search" element={<Search />}></Route>
         <Route path="see-more" element={<See />}></Route>
         <Route path="sign-up" element={<Sign />}></Route>
-        <Route path="your-liked" element={<Like />}></Route>
+        
         <Route path="create play-list" element={<My />}></Route>
-        <Route path="liked songs" element={<My />}></Route>
+        <Route path="liked songs" element={<Like />}></Route>
       </Routes>
     </BrowserRouter>
   );

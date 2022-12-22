@@ -1,11 +1,11 @@
 import "./App.css";
 
-import { Date,Like, Song, Lenght, Main, My, Happy, Oneof} from "./component";
+import { Date2,Like, Song, Lenght, Main, My, Happy, Oneof, Add , } from "./component";
 
 
 const App = () => {
   return (
-      <Date/>
+      <Date2/>
   );
 };
 export default App;

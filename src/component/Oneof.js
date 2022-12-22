@@ -1,7 +1,9 @@
 import styles from "../styles/Oneof.module.css";
 import { AiOutlineHeart } from "react-icons/ai";
+import { TbHeartOff } from "react-icons/tb";
 import { Left, Main } from ".";
 import { useState } from "react";
+import { FaSpotify } from "react-icons/fa";
 
 const SONGS = [
   {
@@ -10,7 +12,6 @@ const SONGS = [
     p: "By spotify",
     h: "Somewhere Over there ",
     isLiked: false,
-
   },
   {
     imgSrc:
@@ -51,15 +52,15 @@ const SONGS = [
 ];
 
 export const Oneof = () => {
-  
   const [songs, setSongs] = useState(SONGS);
-  
+
   const likeClick = (index) => {
-    console.log(index)
-   
-   
+    const allLike = [...songs];
+    allLike[index].isLiked = !allLike[index].isLiked;
+    setSongs(allLike);
+    console.log(allLike);
   };
-  
+
   return (
     <div className={styles.space}>
       {songs &&
@@ -70,7 +71,7 @@ export const Oneof = () => {
               <div className={styles.h}>{song.h}</div>
               <div className={styles.p}>{song.p}</div>
               <div className={styles.like} onClick={() => likeClick(index)}>
-                <div> {song.isLiked &&<AiOutlineHeart  /> }</div>
+                <div> {song.isLiked ? <AiOutlineHeart /> : <TbHeartOff />}</div>
               </div>
             </div>
           </div>

@@ -24,7 +24,6 @@ export const Like = () => {
     tasksClone[index].isCompleted = !tasksClone[index].isCompleted;
     setTasks(tasksClone);
   };
-  
 
   return (
     <div className={styles.bg}>
@@ -40,8 +39,7 @@ export const Like = () => {
         </button>
         <p className={styles.liked}>Your liked ones</p>
         <div className={styles.over}>
-        {
-          tasks.map((task, index, imgSrc) => {
+          {tasks.map((task, index, imgSrc) => {
             return (
               <div className={styles.row}>
                 <div className={styles.card}>
@@ -49,7 +47,7 @@ export const Like = () => {
                     src="https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg"
                     className={styles.card_img}
                   ></img>
-                 <p className={styles.liked_one}>{task.text}</p>
+                  <p className={styles.liked_one}>{task.text}</p>
                   <button className={styles.dlt} onClick={() => remove(index)}>
                     delete from liked
                   </button>
