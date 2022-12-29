@@ -12,4 +12,5 @@ export * from "./Lenght";
 export * from "./Date2";
 export * from "./My";
 export * from "./Add";
+export * from "./Local";
 

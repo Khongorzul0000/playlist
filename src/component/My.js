@@ -1,14 +1,27 @@
 import styles from "../styles/My.module.css";
-import { useState, useRef } from "react";
+import { useState, useEffect} from "react";
 import { BsThreeDots } from "react-icons/bs";
-import { AiOutlineSearch } from "react-icons/ai";
-import { Left, Song, Nav, See, Oneof, Lenght } from "../component";
+import axios from "axios"
 
 export const My = () => {
   const [tasks, setTasks] = useState([]);
-
   const [value, setValue] = useState("");
   const [image, setImage] = useState("");
+  const [data, setData] = useState([0]);
+
+  
+  useEffect(() => {
+    axios
+      .get("https://localhost:3001")
+
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+  
 
   const add = () => {
     const newTask = { text: value, isCompleted: false, img: image };
@@ -36,6 +49,7 @@ export const My = () => {
   };
 
   return (
+    <>
     <div>
       <div className={styles.eight}>
         <div className={styles.rest}>
@@ -93,5 +107,6 @@ export const My = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };

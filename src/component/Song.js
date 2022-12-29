@@ -4,7 +4,7 @@ import styles from "../styles/Song.module.css";
 export const Song = () => {
   const [data, setData] = useState([0]);
   const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(5);
+  const [limit, setLimit] = useState(6);
   const baseUrl = "https://6375fb74b5f0e1eb85fed196.mockapi.io/api/v1";
   useEffect(() => {
     axios
